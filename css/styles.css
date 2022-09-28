@@ -10,7 +10,7 @@ h6 {
   font-family: system-ui, sans-serif;
   font-size: 3rem;
   margin: 0;
-  padding: 0 0.1em;
+  padding: 1.2em 0.1em 0em 0.1em;
   color: #1095c1;
 }
 body {
@@ -32,14 +32,14 @@ li {
 
 /* Style the navbar */
 
+.relative#nav {
+  position: relative;
+}
+
 #nav {
   overflow: hidden;
   background-color: #1095c1;
   width: 100%;
-}
-.relative {
-  position: relative;
-  bottom: 0;
 }
 
 /* Navbar links */
@@ -64,6 +64,7 @@ li {
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 #content {
   padding: 60px;
+  margin: 0 10% 0 10%;
 }
 
 /*#### Hover Effect
