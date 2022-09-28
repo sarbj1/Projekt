@@ -1,3 +1,44 @@
-p {
-  font-family: "Courier New", Courier, monospace;
+body {
+  font-family: "Times New Roman", Georgia, Serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: system-ui, sans-serif;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0 0.1em;
+  color: #1095c1;
+}
+.hover {
+  color: #0000;
+  background: linear-gradient(90deg, #1095c1 50%, #000 0) var(--_p, 100%) / 200%
+    no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: 0.4s;
+}
+.hover:hover {
+  --_p: 0%;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-content: center;
+}
+h3 {
+}
+
+ul {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+  font-size: 5em;
+  padding: 10px;
 }
