@@ -1,0 +1,39 @@
+/* Float
+
+h1 {
+  float: left;
+}
+
+.navi {
+  float: right;
+}
+
+.list {
+  float: left;
+  padding: 20px;
+  list-style: none;
+  font-style: bold;
+} */
+
+.container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.item1 {
+  align-self: center;
+}
+
+.nav {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.titel {
+  flex-grow: 1;
+}
