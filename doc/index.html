@@ -2,19 +2,77 @@
 <head>
   <title>Index</title>
   <link rel="stylesheet" type="text/css" href="../css/styles_flexbox.css" />
+  
+  
 </head>
 
-<body>
-  <header>Header</header>
-  <nav>Nav</nav>
+<body onLoad="ScrollReveal();"></script> 
+  <header><h1>Header</h1></header>
+  <nav id="nav">
+    <div class="relative">
+      <a class="hover" href="#Home">Home</a>
+      <a class="hover" href="#Profil">Profil</a>
+      <a class="hover" href="#CV">CV</a>
+      <a class="hover" href="#Kontakt">Kontakt</a>
+    </div>
+  </nav>
   <div id="main">
     <content>
-      <article>Article</article>
-      <article>Article1</article>
-      <article>Article2</article>
+      <article class="article-item">
+        <div class="article-img"></div>
+
+        <div class="article-content js--fadeInLeft">
+          <h2>Title</h2>
+          <div class="date">1 August 1999</div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
+            ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed
+            nulla voluptatem recusandae dolor, nostrum excepturi amet in
+            dolores. Alias, ullam.
+          </p>
+          <a class="bnt-more" href="javascript:void(0)">Mehr erfahren</a>
+        </div>
+      </article>
+   
+      
+      <article class="article-item">
+        <div class="article-img"></div>
+
+        <div class="article-content js--fadeInLeft">
+          <h2>Title</h2>
+          <div class="date">1 August 1999</div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
+            ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed
+            nulla voluptatem recusandae dolor, nostrum excepturi amet in
+            dolores. Alias, ullam.
+          </p>
+          <a class="bnt-more" href="javascript:void(0)">Mehr erfahren</a>
+        </div>
+      </article>
+      <article class="article-item">Article2</article>
     </content>
 
-    <aside>Aside</aside>
+    <aside><h1>Aside</h1></aside>
   </div>
   <footer>Footer</footer>
+  <script>
+    window.onscroll = function () {
+      myFunction();
+    };
+
+    var nav = document.getElementById("nav");
+    var sticky = nav.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        nav.classList.remove("relative");
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+        nav.classList.add("relative");
+      }
+    }
+  </script>
+  <script type="text/javascript" src="java.js"></script>
 </body>
