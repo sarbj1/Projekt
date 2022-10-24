@@ -10,9 +10,6 @@ body {
   font-weight: 400;
   background-color: #eee;
 }
-header {
-  height: 90vh;
-}
 
 header p {
   font-family: "Allura";
@@ -60,19 +57,26 @@ nav a {
   flex-direction: column;
 }
 header {
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #3f51b5;
   color: #ffffff;
   padding: 150px 0;
+  background-image: url(../img/cube.jpgx§x§);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }
 header h1 {
   font-size: 10em;
 }
 #main > aside {
   flex: 1;
-  background: beige;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 header,
@@ -83,8 +87,9 @@ nav {
 }
 
 footer {
-  background: yellowgreen;
+  background: #32408f;
   height: 10vh;
+  color: white;
 }
 
 .article-item {
@@ -92,6 +97,18 @@ footer {
   margin-bottom: 50px;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+  transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in,
+    -webkit-transform 400ms ease-in;
+  opacity: 0;
+}
+
+aside .article-item {
+  width: 100%;
+  margin-bottom: 50px;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
   transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
   transition: opacity 250ms ease-in, transform 400ms ease-in;
   transition: opacity 250ms ease-in, transform 400ms ease-in,
@@ -151,8 +168,7 @@ a:focus {
 }
 
 .article-item .article-img-header {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
-    url("https://picsum.photos/1000/800/?random") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
   background-size: cover;
 }
 
@@ -171,4 +187,47 @@ a:focus {
 .date {
   display: inline-block;
   color: #3f51b5;
+}
+
+.zeitleiste {
+  border-left: 3px solid black;
+  padding: 2em 0;
+  position: relative;
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
+.zeitleiste::before {
+  content: "Heute";
+  position: absolute;
+  top: -1.3em;
+  left: -1.3em;
+  font-weight: bold;
+}
+
+.zeitleiste::after {
+  content: "2015";
+  position: absolute;
+  bottom: -1.2em;
+  left: -1.2em;
+}
+
+.z-element {
+  position: relative;
+  left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5em;
+}
+
+.z-element::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  border: 4px solid #f5f5f5;
+  left: -1.83em;
+  border-radius: 50em;
 }
