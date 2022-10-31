@@ -9,6 +9,9 @@ body {
   font-size: 17px;
   font-weight: 400;
   background-color: #eee;
+  background-image: url(../img/cube.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header p {
@@ -57,6 +60,7 @@ nav a {
   transition: background-color 0.4s;
   box-shadow: 0 20px 25px -10px #6a2a10;
   height: 5vh;
+  background-image: none;
 }
 
 nav a:hover {
@@ -116,9 +120,15 @@ nav {
 }
 
 footer {
-  background: #32408f;
   height: 10vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: black;
   color: white;
+  z-index: 10;
+  background-image: linear-gradient(180deg, #04091e 40%, #f9a20130 100%);
 }
 
 .article-item {
@@ -136,8 +146,8 @@ footer {
 aside .article-item {
   width: 100%;
   margin-bottom: 50px;
-  -webkit-transform: translateX(50%);
-  transform: translateX(50%);
+  -webkit-transform: translateX(2%);
+  transform: translateX(2%);
   transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
   transition: opacity 250ms ease-in, transform 400ms ease-in;
   transition: opacity 250ms ease-in, transform 400ms ease-in,
@@ -158,7 +168,7 @@ aside .article-item {
   padding: 10px 30px;
   border-radius: 4px;
   background: #f5f5f5;
-  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 20px 0px #f9a401;
 }
 
 .article-img {
@@ -260,4 +270,216 @@ aside a {
   border: 4px solid #f5f5f5;
   left: -1.83em;
   border-radius: 50em;
+}
+
+form {
+  max-width: 600px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+input,
+textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  font-family: "Merriweather", sans-serif;
+  box-shadow: 0 1px 1px rgba(black, 0.1);
+  resize: none;
+}
+input:focus {
+  box-shadow: 0 1px 2px #f9a401 !important;
+}
+textarea:focus {
+  box-shadow: 0 1px 2px #f9a401 !important;
+}
+
+#input-submit {
+  color: white;
+  background: #f9a401;
+  cursor: pointer;
+}
+#input-submit:hover {
+  box-shadow: 0 1px 2px #442c00 !important;
+}
+
+textarea {
+  height: 126px;
+}
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right {
+  width: 50%;
+}
+
+.left {
+  margin-right: 2%;
+}
+
+@media (max-width: 480px) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+}
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/* Profil */
+
+#profile {
+  color: var(--color-main);
+  align-items: center;
+}
+
+#profile img {
+  max-width: 20vh;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-container {
+  padding: 0 1em;
+}
+
+.icon-container li {
+  gap: 1em;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  place-items: center;
+}
+
+.icon-container li img {
+  width: 32px;
+}
+
+.languages li {
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  align-self: flex-end;
+  position: relative;
+  height: 0.7em;
+  width: 10em;
+}
+
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: color-burn;
+  background-color: #fff3e2;
+}
+
+.progress-bar-fill {
+  position: relative;
+  height: 100%;
+  width: 0;
+  background-color: #fff3e2;
+}
+
+.hobbies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-around;
+}
+
+.hobbies li {
+  max-width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  #profile {
+    display: grid;
+    gap: 0.5em 0.5em;
+
+    grid-template:
+      "header header header . . "
+      "text text . . image "
+      "skills skills . languages languages ";
+  }
+  #profile h2 {
+    grid-area: header;
+  }
+
+  #profile p {
+    grid-area: text;
+  }
+
+  #profile img {
+    grid-area: image;
+    place-self: start;
+  }
+
+  #profile .skills {
+    grid-area: skills;
+  }
+
+  #profile .languages {
+    grid-area: languages;
+    align-self: start;
+  }
+
+  #profile .hobbies {
+    max-width: 20vw;
+    place-self: start;
+    justify-self: center;
+    grid-area: hobbies;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #profile .hobbies ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    padding: 0;
+  }
+
+  #profile .hobbies img {
+    min-width: 32px;
+  }
+
+  #profile .hobbies li {
+    max-width: 100%;
+    flex-basis: 50%;
+    flex-shrink: 0;
+    flex-direction: row;
+  }
+
+  .list {
+    min-width: 0;
+  }
 }

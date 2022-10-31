@@ -16,7 +16,7 @@
     <nav id="nav">
       <div class="relative">
         <a class="hover" href="#Home">Home</a>
-        <a class="hover" href="#Profil">Profil</a>
+        <a class="hover" href="#Profil">Über mich</a>
         <a class="hover" href="#CV">CV</a>
         <a class="hover" href="#Kontakt">Kontakt</a>
       </div>
@@ -29,15 +29,112 @@
         <div class="article-img"></div>
 
         <div class="article-content ">
-          <h2>Profil</h2>
-          <div class="date">1 August 1999</div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
-            ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed
-            nulla voluptatem recusandae dolor, nostrum excepturi amet in
-            dolores. Alias, ullam.
-          </p>
-          <a class="bnt-more" href="javascript:void(0)">Mehr erfahren</a>
+          
+          <section id="profile">
+            <h2 id="Profil">Über mich</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,diam olore magna aliquyam erat, sed diam voluptua. </p>
+            <img id="profilbild" src="../img/jonas.jpg" alt="profilbild">
+            <div class="skills list">
+                <h3>Skills</h3>
+                <ul class="icon-container">
+                    <li>
+                        <img src="assets/angular.svg" alt="angular">
+                        <span>
+                        Angular
+                    </span>
+                        <div class="flex-spacer"></div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 90%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assets/typescript.svg" alt="typescript">
+                        <span>
+                        Typescript
+                    </span>
+                        <div class="flex-spacer"></div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 80%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assets/javascript.svg" alt="javascript">
+                        <span>
+                        Javascript
+                    </span>
+
+                        <div class="flex-spacer"></div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 92%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assets/html.svg" alt="html">
+                        <span>
+                        HTML
+                    </span>
+
+                        <div class="flex-spacer"></div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 100%"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assets/css.svg" alt="css">
+                        <span>
+                        CSS
+                    </span>
+
+                        <div class="flex-spacer"></div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 70%"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="languages list">
+              <h3>Sprachen</h3>
+              <ul class="icon-container languages">
+                  <li>
+                      <img src="assets/germany.svg" alt="german">
+                      <span>Deutsch</span>
+                      <div class="flex-spacer"></div>
+                      <div class="progress-bar">
+                          <div class="progress-bar-fill" style="width: 99%"></div>
+                      </div>
+                  </li>
+                  <li>
+                      <img src="assets/britain.svg" alt="english">
+                      <span>English</span>
+    
+                      <div class="flex-spacer"></div>
+                      <div class="progress-bar">
+                          <div class="progress-bar-fill" style="width: 99%"></div>
+                      </div>
+                  </li>
+                  <li>
+                      <img src="assets/france.svg" alt="french">
+                      <span>Französisch</span>
+    
+                      <div class="flex-spacer"></div>
+                      <div class="progress-bar">
+                          <div class="progress-bar-fill" style="width: 66%"></div>
+                      </div>
+                  </li>
+    
+                  <li>
+                      <img src="assets/italy.svg" alt="italian">
+                      <span>Italienisch</span>
+                      <div class="flex-spacer"></div>
+                      <div class="progress-bar">
+                          <div class="progress-bar-fill" style="width: 33%"></div>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+            
+        </section>
         </div>
       </article>
    
@@ -67,26 +164,61 @@
           
         </div>
       </article>
-      <article class="article-item">Article2</article>
+
+      <article class="article-item">
+        <div class="article-img"></div>
+
+        <div class="article-content ">
+          <h2 id="Kontakt">Kontaktformular</h2>
+          
+          <form class="cf">
+            <div class="half left cf">
+              <input type="text" id="input-name" placeholder="Name">
+              <input type="email" id="input-email" placeholder="Email address">
+              <input type="text" id="input-subject" placeholder="Subject">
+            </div>
+            <div class="half right cf">
+              <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+            </div>  
+            <input type="submit" value="Submit" id="input-submit">
+          </form>
+          
+        </div>
+      </article>
+      
     </content>
 
     <aside><article class="article-item">
-      <div class="article-img"></div>
-
-      <div class="article-content ">
-        <h2>Title</h2>
-        <div class="date">1 August 1999</div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
-          ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed
-          nulla voluptatem recusandae dolor, nostrum excepturi amet in
-          dolores. Alias, ullam.
-        </p>
-        <a class="bnt-more" href="javascript:void(0)">Mehr erfahren</a>
+      <div class="article-img"></div>  
+        
+      <div class="hobbies list">
+        <div class="article-content ">
+          <h3>Hobbies</h3>
+          <ul class="icon-container hobbies">
+              <li>
+                  <img src="assets/dance.svg">
+                  <span>Tanzen</span>
+              </li>
+              <li>
+                  <img src="assets/juggling.svg">
+                  <span>Jonglieren</span>
+              </li>
+              <li>
+                  <img src="assets/swimming.svg">
+                  <span>Schwimmen</span>
+              </li>
+              <li>
+                  <img src="assets/gaming.svg">
+                  <span>Gamen</span>
+              </li>
+          </ul>
+        </div>
       </div>
     </article></aside>
+   
   </div>
   <footer>Footer</footer>
+ 
   <script>
     window.onscroll = function () {
       myFunction();
