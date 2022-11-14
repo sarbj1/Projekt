@@ -9,7 +9,7 @@ body {
   font-size: 17px;
   font-weight: 400;
   background-color: #eee;
-  background-image: url(../img/cube.jpg);
+  background-image: url(../img/cube_blur.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: #32408f;
@@ -29,12 +29,15 @@ header p {
   display: flex;
   min-height: calc(100vh - 30vh);
   padding-top: 20px;
-  margin: 1em 10em;
+  margin: auto;
 }
 .profilbild {
   border-radius: 50%;
   width: 12em;
   box-shadow: 0 30px 35px -10px #6a2a10;
+}
+#profilbild {
+  border-radius: 4%;
 }
 nav {
   display: flex;
@@ -116,7 +119,6 @@ header h1 {
 }
 
 header,
-footer,
 article,
 nav {
   padding: 0.5em;
@@ -125,12 +127,13 @@ nav {
 footer {
   height: 7vh;
   width: 100%;
-  justify-content: center;
+  justify-content: right;
+  display: flex;
   align-items: center;
-  /* position: absolute; */
   color: white;
   z-index: 10;
   background: none;
+  padding-right: 10px;
   background-image: linear-gradient(180deg, #04091e00 40%, #f9a2011c 100%);
 }
 
@@ -387,7 +390,7 @@ textarea {
   align-self: flex-end;
   position: relative;
   height: 0.7em;
-  width: 10em;
+  width: 3em;
 }
 
 .progress-bar::after {
@@ -398,14 +401,14 @@ textarea {
   right: 0;
   bottom: 0;
   mix-blend-mode: color-burn;
-  background-color: #fff3e2;
+  background-color: #f9a401;
 }
 
 .progress-bar-fill {
   position: relative;
   height: 100%;
   width: 0;
-  background-color: #fff3e2;
+  background-color: #5756547d;
 }
 
 .hobbies {
@@ -422,7 +425,7 @@ textarea {
   flex-direction: column;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   #profile {
     display: grid;
     gap: 0.5em 0.5em;
@@ -485,4 +488,18 @@ textarea {
   .list {
     min-width: 0;
   }
+}
+
+footer li {
+  display: inline;
+  list-style-type: none;
+}
+
+footer ul {
+  margin: 0;
+  text-align: left;
+}
+
+content {
+  margin: 0 25%;
 }
