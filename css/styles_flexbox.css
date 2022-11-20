@@ -240,7 +240,7 @@ aside a {
   padding: 2em 0;
   position: relative;
   margin-left: 2em;
-  margin-bottom: 2em;
+  margin: 2em 0;
 }
 
 .zeitleiste::before {
@@ -424,6 +424,19 @@ textarea {
   display: flex;
   flex-direction: column;
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row1 {
+  flex: 30%;
+}
+.row2 {
+  flex: 70%;
+}
+.rowbetween {
+  margin-top: 1rem !important;
+}
 
 @media (min-width: 1000px) {
   #profile {
@@ -431,33 +444,63 @@ textarea {
     gap: 0.5em 0.5em;
 
     grid-template:
-      "header header header . . "
-      "text text . . image "
-      "skills skills . languages languages ";
+      "header header header header"
+      "image info info info "
+      "text text  text text ";
   }
   #profile h2 {
     grid-area: header;
   }
-
+  .info {
+    grid-area: info;
+  }
   #profile p {
     grid-area: text;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row1 {
+    flex: 30%;
+  }
+  .row2 {
+    flex: 70%;
+  }
+  .rowbetween {
+    margin-top: 1rem !important;
   }
 
   #profile img {
     grid-area: image;
     place-self: start;
   }
+}
 
-  #profile .skills {
+@media (min-width: 1000px) {
+  #skills {
+    display: grid;
+    gap: 0.5em 0.5em;
+
+    grid-template:
+      "header header header  "
+      "skills skills languages  ";
+  }
+
+  #skills h2 {
+    grid-area: header;
+  }
+
+  #skills .skills {
     grid-area: skills;
   }
 
-  #profile .languages {
+  #skills .languages {
     grid-area: languages;
     align-self: start;
   }
 
-  #profile .hobbies {
+  #skills .hobbies {
     max-width: 20vw;
     place-self: start;
     justify-self: center;
@@ -466,7 +509,7 @@ textarea {
     gap: 0;
   }
 
-  #profile .hobbies ul {
+  #skills .hobbies ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -474,11 +517,11 @@ textarea {
     padding: 0;
   }
 
-  #profile .hobbies img {
-    min-width: 32px;
+  #skills .hobbies img {
+    visibility: none;
   }
 
-  #profile .hobbies li {
+  #skills .hobbies li {
     max-width: 100%;
     flex-basis: 50%;
     flex-shrink: 0;
@@ -502,4 +545,30 @@ footer ul {
 
 content {
   margin: 0 25%;
+}
+
+@media (min-width: 1000px) {
+  .Zeit {
+    display: grid;
+    gap: 0.5em 0.5em;
+
+    grid-template:
+      "zeit zeit2"
+      "Beruf  Schule ";
+  }
+}
+
+.Beruf {
+  grid-area: Beruf;
+}
+
+.Schule {
+  grid-area: Schule;
+}
+
+.zeit {
+  grid-area: zeit;
+}
+.zeit2 {
+  grid-area: zeit2;
 }
