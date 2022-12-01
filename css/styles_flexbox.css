@@ -1,3 +1,8 @@
+:root {
+  --white: #f9f9f9;
+  --black: #36383f;
+  --gray: #85888c;
+}
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -39,53 +44,150 @@ header p {
 #profilbild {
   border-radius: 4%;
 }
-nav {
-  display: flex;
-  height: 5vh;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  z-index: 10;
-  background-image: linear-gradient(
-    180deg,
-    #101a3459 40%,
-    rgba(238, 238, 238, 0) 100%
-  );
+@media (min-width: 1000px) {
+  nav {
+    padding: 0.5em;
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    background-image: linear-gradient(
+      180deg,
+      #101a3459 40%,
+      rgba(238, 238, 238, 0) 100%
+    );
+  }
+  .hamb {
+    display: none;
+  }
+  .side-menu {
+    display: none;
+  }
+
+  nav a {
+    color: #f9a201;
+  }
+  .sticky {
+    background-color: #f9a201;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    transition: background-color 0.4s;
+    box-shadow: 0 20px 25px -10px #6a2a10;
+    height: 5vh;
+    background-image: none;
+  }
+
+  nav a:hover {
+    color: white;
+  }
+
+  .sticky a {
+    color: white;
+    transition: background-color 0.3s;
+  }
+
+  .sticky a:hover {
+    color: #32408f;
+  }
+  nav a {
+    padding: 20px;
+
+    text-decoration: none;
+  }
+}
+@media (max-width: 1000px) {
+  a {
+    text-decoration: none;
+  }
+  nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+    z-index: 1;
+    padding: 0;
+  }
+  .menu {
+    padding-top: 3em;
+  }
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: #f9a201;
+    padding: 2em;
+    text-align: center;
+  }
+  .menu a:hover {
+    background-color: var(--gray);
+  }
+  nav {
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    padding: 0;
+  }
+
+  .hamb {
+    cursor: pointer;
+    right: 0px;
+    padding: 20px 10px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    margin-bottom: 2em;
+    background-color: #f9a201;
+  } /* Style label tag */
+  .hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+  } /* Style span tag */
+
+  .hamb-line::before,
+  .hamb-line::after {
+    background: var(--white);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+  .hamb-line::before {
+    top: 5px;
+  }
+  .hamb-line::after {
+    top: -5px;
+  }
+
+  .side-menu {
+    display: none;
+  } /* Hide checkbox */
+
+  .side-menu:checked ~ nav {
+    max-height: 100%;
+  }
+
+  .side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+  }
+  .side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
 }
 
-nav a {
-  color: #f9a401;
-}
-.sticky {
-  background-color: #f9a201;
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  transition: background-color 0.4s;
-  box-shadow: 0 20px 25px -10px #6a2a10;
-  height: 5vh;
-  background-image: none;
-}
-
-nav a:hover {
-  color: white;
-}
-
-.sticky a {
-  color: white;
-  transition: background-color 0.3s;
-}
-
-.sticky a:hover {
-  color: #32408f;
-}
-nav a {
-  padding: 20px;
-
-  text-decoration: none;
-}
 #main > content {
   flex: 2;
   padding: 10px;
@@ -119,8 +221,7 @@ header h1 {
 }
 
 header,
-article,
-nav {
+article {
   padding: 0.5em;
 }
 
@@ -252,10 +353,39 @@ aside a {
 }
 
 .zeitleiste::after {
-  content: "2015";
+  content: "2013";
   position: absolute;
   bottom: -1.2em;
   left: -1.2em;
+}
+.zeitleiste2 {
+  border-left: 3px solid #32408f;
+  padding: 2em 0;
+  position: relative;
+  margin-left: 2em;
+  margin: 2em 0;
+}
+
+.zeitleiste2::before {
+  content: "Heute";
+  position: absolute;
+  top: -1.3em;
+  left: -1.3em;
+  font-weight: bold;
+}
+.zeitleiste2::after {
+  content: "2010";
+  position: absolute;
+  bottom: -1.2em;
+  left: -1.2em;
+}
+
+.z-title {
+  color: #f9a201;
+  font-weight: bold;
+  border-bottom: 2px solid #f9a201;
+  margin-bottom: 0.2em;
+  margin-right: 4em;
 }
 
 .z-element {
@@ -554,7 +684,8 @@ content {
 
     grid-template:
       "zeit zeit2"
-      "Beruf  Schule ";
+      "Beruf  Schule "
+      "Beruf .";
   }
 }
 

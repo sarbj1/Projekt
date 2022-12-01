@@ -2,6 +2,7 @@
 <head>
   <title>Index</title>
   <link rel="stylesheet" type="text/css" href="../css/styles_flexbox.css" />
+  <script src="https://unpkg.com/sv443-joke-api@0.0.8/web/index.js"></script>
 </head>
 <body>
   <header id="Home">
@@ -11,13 +12,17 @@
     <div class="headtext">
       <h1>Portfolio</h1>
     </div>
-    <nav id="nav">
-      <div class="relative">
-        <a class="hover" href="#Home">Home</a>
-        <a class="hover" href="#Profil">Über mich</a>
-        <a class="hover" href="#CV">CV</a>
-        <a class="hover" href="#Kontakt">Kontakt</a>
-      </div>
+    <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+    <nav id="nav" class="relative">
+      
+        <div class="menu">
+          <a onclick="hide()" class="hover" href="#Home">Home</a>
+        <a onclick="hide()"class="hover" href="#Profil">Über mich</a>
+        <a onclick="hide()"class="hover" href="#CV">CV</a>
+        <a onclick="hide()"class="hover" href="#Kontakt">Kontakt</a>
+        </div>
+     
     </nav>
   </header>
 
@@ -30,9 +35,9 @@
           <section id="profile">
             <h2 id="Profil">Über mich</h2>
             <p>
-              Ich bin begeistert von der IT, die Freude am Arbeitsplatz schätze
-              ich sehr und Ehrlichkeit brauche ich als Grundvoraussetzung für
-              ein gutes Klima im Team.
+              Ich bin begeistert von der IT und die Freude am Arbeitsplatz schätze
+              ich sehr. Ehrlichkeit brauche ich als Grundvoraussetzung für
+              ein gutes Klima im Team. <br />
             </p>
             <img id="profilbild" src="../img/jonas.jpg" alt="profilbild" />
             <div class="info">
@@ -85,14 +90,7 @@
                     <div class="progress-bar-fill" style="width: 90%"></div>
                   </div>
                 </li>
-                <li>
-                  <img src="../img/typescript.svg" alt="typescript" />
-                  <span> Typescript </span>
-                  <div class="flex-spacer"></div>
-                  <div class="progress-bar">
-                    <div class="progress-bar-fill" style="width: 80%"></div>
-                  </div>
-                </li>
+                
                 <li>
                   <img src="../img/javascript.svg" alt="javascript" />
                   <span> Javascript </span>
@@ -161,33 +159,82 @@
         <div class="article-img"></div>
 
         <div class="article-content">
+          <section id="hobbies">
+            <h2>Hobbies</h2>
+
+            <ul class="icon-container hobbies">
+              <li>
+                <img src="../img/fussball.svg" />
+                <span>Fussball</span>
+              </li>
+              <li>
+                <img src="../img/ski.svg" />
+                <span>Ski fahren</span>
+              </li>
+              <li>
+                <img src="../img/web.svg" />
+                <span>Design</span>
+              </li>
+              <li>
+                <img src="../img/cam.svg" />
+                <span>Fotografieren</span>
+              </li>
+            </ul>
+
+            <h3>Anscheinden bin ich auch gut in Witze erzählen:</h3>
+            <div id="joke-container">
+              <p id="joke--text"></p>
+            </div>
+        </div>
+      </article>
+
+      <article class="article-item">
+        <div class="article-img"></div>
+
+        <div class="article-content">
           <div class="Zeit">
-            <h3 class="zeit">Berufserfahrung</h3>
+            <h2 class="zeit">Berufserfahrung</h2>
             <div class="zeitleiste Beruf">
               <div class="z-element">
-                <div class="z-title">Mediamatiker</div>
-                <div class="z-location">BFO</div>
-                <div class="z-time">11.11.2000</div>
+                <div class="z-title">Junior Online Marketing Manager</div>
+                <div class="z-location">Grächen Tourismus</div>
+                <div class="z-time">2020 - heute</div>
               </div>
-
               <div class="z-element">
-                <div class="z-title">Mediamatiker</div>
+                <div class="z-title">
+                  Mitarbeier Back- / Frontoffice & Marketing
+                </div>
+                <div class="z-location">Grächen Tourismus</div>
+                <div class="z-time">2019 - 2020</div>
+              </div>
+              <div class="z-element">
+                <div class="z-title">Lehre Mediamatiker</div>
                 <div class="z-location">BFO</div>
-                <div class="z-time">11.11.2000</div>
+                <div class="z-time">2015 - 2018</div>
+              </div>
+              <div class="z-element">
+                <div class="z-title">Lehre Mediamatiker</div>
+                <div class="z-location">ICT Lehrvertriebsverbund</div>
+                <div class="z-time">2014 - 2015</div>
               </div>
             </div>
-            <h3 class="zeit2">Schule</h3>
-            <div class="zeitleiste Schule">
+            <h2 class="zeit2">Schule</h2>
+            <div class="zeitleiste2 Schule">
               <div class="z-element">
-                <div class="z-title">Mediamatiker</div>
-                <div class="z-location">BFO</div>
-                <div class="z-time">11.11.2000</div>
+                <div class="z-title">
+                  Berner Fachhochschule (Wirtschaftsinformatik)
+                </div>
+                <div class="z-time">2020 - heute</div>
               </div>
 
               <div class="z-element">
-                <div class="z-title">Mediamatiker</div>
-                <div class="z-location">BFO</div>
-                <div class="z-time">11.11.2000</div>
+                <div class="z-title">Kollegium Brig</div>
+                <div class="z-time">2011 - 2013</div>
+              </div>
+
+              <div class="z-element">
+                <div class="z-title">Orientierungsschule Visp</div>
+                <div class="z-time">2009 - 2011</div>
               </div>
             </div>
           </div>
@@ -223,37 +270,6 @@
         </div>
       </article>
     </content>
-
-    <!-- <aside>
-      <article class="article-item">
-        <div class="article-img"></div>
-
-        <div class="hobbies list">
-          <div class="article-content">
-            <h3>Hobbies</h3>
-            <ul class="icon-container hobbies">
-              <li>
-                <img src="assets/dance.svg" />
-                <span>Tanzen</span>
-              </li>
-              <li>
-                <img src="assets/juggling.svg" />
-                <span>Jonglieren</span>
-              </li>
-              <li>
-                <img src="assets/swimming.svg" />
-                <span>Schwimmen</span>
-              </li>
-              <li>
-                <img src="assets/gaming.svg" />
-                <span>Gamen</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </article>
-    </aside>
-    -->
   </div>
   <footer>
     <ul>
@@ -287,6 +303,9 @@
         nav.classList.add("relative");
       }
     }
+    function hide() {
+      document.getElementById("side-menu").checked = false;
+}
   </script>
 
   <script type="text/javascript" src="java.js"></script>
