@@ -415,7 +415,8 @@ form {
 }
 
 input,
-textarea {
+textarea,
+button {
   border: 0;
   outline: 0;
   padding: 1em;
@@ -434,7 +435,8 @@ textarea:focus {
   box-shadow: 0 1px 2px #f9a401 !important;
 }
 
-#input-submit {
+#input-submit,
+button {
   color: white;
   background: #32408f;
   cursor: pointer;

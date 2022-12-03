@@ -26,23 +26,25 @@ articles.forEach((article) => {
 
 /*
 Reference
-https://sahithyandev.github.io/sv443-joke-api-js-wrapper/
+https://github.com/arifulsajib/random-joke-generator-js/
 */
 
-console.log(Object.values(JokeAPI));
+const jokeEl = document.getElementById("joke");
+const jokeBtn = document.getElementById("jokeBtn");
 
-// JokeAPI.getJokes().then(r => console.log(r.body))
-JokeAPI.getJokes({
-  jokeType: "single",
-})
-  .then((r) => r.json())
-  .then((data) => {
-    updateUI(data);
-  });
+jokeBtn.addEventListener("click", generateJoke);
 
-// To update the joke on the UI
-function updateUI(jokeData) {
-  const $ = (id) => document.getElementById(id);
+generateJoke();
 
-  $("joke--text").innerHTML = jokeData.joke;
+function generateJoke() {
+  const config = {
+    headers: {
+      Accept: "application/json",
+    },
+  };
+  fetch("https://icanhazdadjoke.com/", config)
+    .then((res) => res.json())
+    .then((data) => {
+      jokeEl.innerHTML = data.joke;
+    });
 }
