@@ -108,7 +108,7 @@ header p {
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: var(--black);
+    background-color: #121733;
     overflow: hidden;
     z-index: 1;
     padding: 0;
@@ -124,7 +124,8 @@ header p {
     text-align: center;
   }
   .menu a:hover {
-    background-color: var(--gray);
+    color: #ffffff;
+    background-color: #f9a201;
   }
   nav {
     max-height: 0;
