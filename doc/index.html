@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<head>
+  <title>Index</title>
+  <link rel="stylesheet" type="text/css" href="../css/styles_flexbox.css" />
+  <script src="https://unpkg.com/sv443-joke-api@0.0.8/web/index.js"></script>
+</head>
+<body>
+  <header id="Home">
+    <div class="bild">
+      <img class="profilbild" src="../img/jonas.jpg" />
+    </div>
+    <div class="headtext">
+      <h1>Portfolio</h1>
+    </div>
+    <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+    <nav id="nav" class="relative">
+      
+        <div class="menu">
+          <a onclick="hide()" class="hover" href="#Home">Home</a>
+        <a onclick="hide()"class="hover" href="#Profil">Über mich</a>
+        <a onclick="hide()"class="hover" href="#CV">CV</a>
+        <a onclick="hide()"class="hover" href="#Kontakt">Kontakt</a>
+        </div>
+     
+    </nav>
+  </header>
+
+  <div id="main">
+    <content>
+      <article class="article-item">
+        <div class="article-img"></div>
+
+        <div class="article-content">
+          <section id="profile">
+            <h2 id="Profil">Über mich</h2>
+            <p>
+              Ich bin begeistert von der IT und die Freude am Arbeitsplatz schätze
+              ich sehr. Ehrlichkeit brauche ich als Grundvoraussetzung für
+              ein gutes Klima im Team. <br />
+            </p>
+            <img id="profilbild" src="../img/jonas.jpg" alt="profilbild" />
+            <div class="info">
+              <div class="card-body">
+                <h3>Jonas Sarbach</h3>
+                <div class="row">
+                  <div class="row1">
+                    <strong>Alter:</strong>
+                  </div>
+                  <div class="row2">26</div>
+                </div>
+                <div class="row rowbetween">
+                  <div class="row1">
+                    <strong>Email:</strong>
+                  </div>
+                  <div class="row2">jonas.sarbach@mail.com</div>
+                </div>
+                <div class="row rowbetween">
+                  <div class="row1">
+                    <strong>Phone:</strong>
+                  </div>
+                  <div class="row2">+41 (0)12 345 67 89</div>
+                </div>
+                <div class="row rowbetween">
+                  <div class="row1">
+                    <strong>Addresse:</strong>
+                  </div>
+                  <div class="row2">Balfrinstrasse 10, 3930 Visp, Schweiz</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <article class="article-item">
+        <div class="article-img"></div>
+
+        <div class="article-content">
+          <section id="skills">
+            <h2 id="Skills">Skills</h2>
+            <div class="skills">
+              <h3>Skills</h3>
+              <ul class="icon-container">
+                <li>
+                  <img src="../img/angular.svg" alt="angular" />
+                  <span> Angular </span>
+                  <div class="flex-spacer"></div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 90%"></div>
+                  </div>
+                </li>
+                
+                <li>
+                  <img src="../img/javascript.svg" alt="javascript" />
+                  <span> Javascript </span>
+
+                  <div class="flex-spacer"></div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 92%"></div>
+                  </div>
+                </li>
+                <li>
+                  <img src="../img/html.svg" alt="html" />
+                  <span> HTML </span>
+
+                  <div class="flex-spacer"></div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 100%"></div>
+                  </div>
+                </li>
+                <li>
+                  <img src="../img/css.svg" alt="css" />
+                  <span> CSS </span>
+
+                  <div class="flex-spacer"></div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 70%"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="languages">
+              <h3>Sprachen</h3>
+              <ul class="icon-container languages">
+                <li>
+                  <img src="../img//germany.svg" alt="german" />
+                  <span>Deutsch</span>
+                  <div class="flex-spacer"></div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 99%"></div>
+                  </div>
+                </li>
+                <li>
+                  <img src="../img/britain.svg" alt="english" />
+                  <span>English</span>
+
+                  <div class="flex-spacer"></div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 99%"></div>
+                  </div>
+                </li>
+                <li>
+                  <img src="../img//france.svg" alt="french" />
+                  <span>Französisch</span>
+
+                  <div class="flex-spacer"></div>
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 66%"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <article class="article-item">
+        <div class="article-img"></div>
+
+        <div class="article-content">
+          <section id="hobbies">
+            <h2>Hobbies</h2>
+
+            <ul class="icon-container hobbies">
+              <li>
+                <img src="../img/fussball.svg" />
+                <span>Fussball</span>
+              </li>
+              <li>
+                <img src="../img/ski.svg" />
+                <span>Ski fahren</span>
+              </li>
+              <li>
+                <img src="../img/web.svg" />
+                <span>Design</span>
+              </li>
+              <li>
+                <img src="../img/cam.svg" />
+                <span>Fotografieren</span>
+              </li>
+            </ul>
+
+            <h3>Anscheinden bin ich auch gut in Witze erzählen:</h3>
+            
+              <div class="container">
+                
+                <div id="joke" class="joke"> // Jokes goes here // </div>
+                <button id="jokeBtn" class="btn">Noch ein Witz</button>
+              </div>
+            
+        </div>
+      </article>
+
+      <article class="article-item">
+        <div class="article-img"></div>
+
+        <div class="article-content">
+          <div class="Zeit">
+            <h2 class="zeit" id="CV">Berufserfahrung</h2>
+            <div class="zeitleiste Beruf">
+              <div class="z-element">
+                <div class="z-title">Junior Online Marketing Manager</div>
+                <div class="z-location">Grächen Tourismus</div>
+                <div class="z-time">2020 - heute</div>
+              </div>
+              <div class="z-element">
+                <div class="z-title">
+                  Mitarbeier Back- / Frontoffice & Marketing
+                </div>
+                <div class="z-location">Grächen Tourismus</div>
+                <div class="z-time">2019 - 2020</div>
+              </div>
+              <div class="z-element">
+                <div class="z-title">Lehre Mediamatiker</div>
+                <div class="z-location">BFO</div>
+                <div class="z-time">2015 - 2018</div>
+              </div>
+              <div class="z-element">
+                <div class="z-title">Lehre Mediamatiker</div>
+                <div class="z-location">ICT Lehrvertriebsverbund</div>
+                <div class="z-time">2014 - 2015</div>
+              </div>
+            </div>
+            <h2 class="zeit2">Schule</h2>
+            <div class="zeitleiste2 Schule">
+              <div class="z-element">
+                <div class="z-title">
+                  Berner Fachhochschule (Wirtschaftsinformatik)
+                </div>
+                <div class="z-time">2020 - heute</div>
+              </div>
+
+              <div class="z-element">
+                <div class="z-title">Kollegium Brig</div>
+                <div class="z-time">2011 - 2013</div>
+              </div>
+
+              <div class="z-element">
+                <div class="z-title">Orientierungsschule Visp</div>
+                <div class="z-time">2009 - 2011</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-item">
+        <div class="article-img"></div>
+
+        <div class="article-content">
+          <h2 id="Kontakt">Kontaktformular</h2>
+
+          <form class="cf">
+            <div class="half left cf">
+              <input type="text" id="input-name" placeholder="Name" />
+              <input
+                type="email"
+                id="input-email"
+                placeholder="Email address"
+              />
+              <input type="text" id="input-subject" placeholder="Subject" />
+            </div>
+            <div class="half right cf">
+              <textarea
+                name="message"
+                type="text"
+                id="input-message"
+                placeholder="Message"
+              ></textarea>
+            </div>
+            <input type="submit" value="Submit" id="input-submit" />
+          </form>
+        </div>
+      </article>
+    </content>
+  </div>
+  <footer>
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/jonas-sarbach-a81a381b4/"
+          ><img src="../img/linkedin.svg" alt="Linkedin"
+        /></a>
+      </li>
+      <li>
+        <a href="https://github.com/sarbj1/"
+          ><img src="../img/github.svg" alt="github"
+        /></a>
+      </li>
+    </ul>
+  </footer>
+
+  <script>
+    window.onscroll = function () {
+      myFunction();
+    };
+
+    var nav = document.getElementById("nav");
+    var sticky = nav.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        nav.classList.remove("relative");
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+        nav.classList.add("relative");
+      }
+    }
+    function hide() {
+      document.getElementById("side-menu").checked = false;
+}
+  </script>
+
+  <script type="text/javascript" src="java.js"></script>
+</body>
