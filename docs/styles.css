@@ -14,20 +14,13 @@ body {
   font-size: 17px;
   font-weight: 400;
   background-color: #eee;
-  background-image: url(assets/cube_blur.jpg);
+  background-image: url(assets/cube_blur.jpg); /* https://pixabay.com/de/illustrations/w%c3%bcrfel-auswahl-eins-gelb-licht-2492010/ */
   background-repeat: no-repeat;
   background-size: cover;
   color: #32408f;
 }
 h2 {
   color: #32408f;
-}
-header p {
-  font-family: "Allura";
-  color: rgba(255, 255, 255, 0.2);
-  margin-bottom: 0;
-  font-size: 60px;
-  margin-top: -30px;
 }
 
 #main {
@@ -36,157 +29,21 @@ header p {
   padding-top: 20px;
   margin: auto;
 }
-.profilbild {
-  border-radius: 50%;
-  width: 12em;
-  box-shadow: 0 30px 35px -10px #6a2a10;
+
+.rotate {
+  color: white;
+  position: fixed;
+  top: 5px;
+  right: 15px;
 }
+
 #profilbild {
   border-radius: 4%;
 }
-@media (min-width: 1000px) {
-  nav {
-    padding: 0.5em;
-    display: flex;
-    height: 5vh;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    z-index: 10;
-    background-image: linear-gradient(
-      180deg,
-      #101a3459 40%,
-      rgba(238, 238, 238, 0) 100%
-    );
-  }
-  .hamb {
-    display: none;
-  }
-  .side-menu {
-    display: none;
-  }
-
-  nav a {
-    color: #f9a201;
-  }
-  .sticky {
-    background-color: #f9a201;
-    position: fixed;
-    overflow: hidden;
-    top: 0;
-    transition: background-color 0.4s;
-    box-shadow: 0 20px 25px -10px #6a2a10;
-    height: 5vh;
-    background-image: none;
-  }
-
-  nav a:hover {
-    color: white;
-  }
-
-  .sticky a {
-    color: white;
-    transition: background-color 0.3s;
-  }
-
-  .sticky a:hover {
-    color: #32408f;
-  }
-  nav a {
-    padding: 20px;
-
-    text-decoration: none;
-  }
-}
-@media (max-width: 1000px) {
-  a {
-    text-decoration: none;
-  }
-  nav {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: #121733;
-    overflow: hidden;
-    z-index: 1;
-    padding: 0;
-  }
-  .menu {
-    padding-top: 3em;
-  }
-  .menu a {
-    display: block;
-    padding: 10px;
-    color: #f9a201;
-    padding: 2em;
-    text-align: center;
-  }
-  .menu a:hover {
-    color: #ffffff;
-    background-color: #f9a201;
-  }
-  nav {
-    max-height: 0;
-    transition: max-height 0.3s ease-out;
-    padding: 0;
-  }
-
-  .hamb {
-    cursor: pointer;
-    right: 0px;
-    padding: 20px 10px;
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    margin-bottom: 2em;
-    background-color: #f9a201;
-  } /* Style label tag */
-  .hamb-line {
-    background: var(--white);
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 24px;
-  } /* Style span tag */
-
-  .hamb-line::before,
-  .hamb-line::after {
-    background: var(--white);
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all 0.2s ease-out;
-    width: 100%;
-  }
-  .hamb-line::before {
-    top: 5px;
-  }
-  .hamb-line::after {
-    top: -5px;
-  }
-
-  .side-menu {
-    display: none;
-  } /* Hide checkbox */
-
-  .side-menu:checked ~ nav {
-    max-height: 100%;
-  }
-
-  .side-menu:checked ~ .hamb .hamb-line {
-    background: transparent;
-  }
-  .side-menu:checked ~ .hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top: 0;
-  }
-  .side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top: 0;
-  }
+.headtext h2 {
+  color: #f9a401;
+  font-size: 2em;
+  text-align: center;
 }
 
 #main > content {
@@ -198,12 +55,11 @@ header p {
 header {
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   background: #3f51b5;
   color: #ffffff;
   padding: 150px 0;
-  background-image: url(assets/cube.jpg);
+  background-image: url(assets/cube.jpg); /* https://pixabay.com/de/illustrations/w%c3%bcrfel-auswahl-eins-gelb-licht-2492010/ */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
@@ -504,7 +360,7 @@ textarea {
 }
 
 .icon-container li {
-  gap: 1em;
+  gap: 0.2em;
   list-style: none;
   display: flex;
   justify-content: flex-start;
@@ -520,10 +376,10 @@ textarea {
 }
 
 .progress-bar {
-  align-self: flex-end;
   position: relative;
-  height: 0.7em;
-  width: 3em;
+  height: 0.8em;
+  width: 6em;
+  text-align: left;
 }
 
 .progress-bar::after {
@@ -534,16 +390,20 @@ textarea {
   right: 0;
   bottom: 0;
   mix-blend-mode: color-burn;
-  background-color: #f9a401;
+  background-color: #02125733;
 }
 
 .progress-bar-fill {
   position: relative;
   height: 100%;
   width: 0;
-  background-color: #5756547d;
+  background-color: #ffe925;
 }
 
+.flex-spacer {
+  tab-size: 30;
+  white-space: pre;
+}
 .hobbies {
   display: flex;
   flex-direction: row;
@@ -563,107 +423,19 @@ textarea {
 }
 .row1 {
   flex: 30%;
+  text-align: left;
+  padding-left: 1em;
 }
 .row2 {
   flex: 70%;
+  text-align: left;
 }
 .rowbetween {
   margin-top: 1rem !important;
 }
-
-@media (min-width: 1000px) {
-  #profile {
-    display: grid;
-    gap: 0.5em 0.5em;
-
-    grid-template:
-      "header header header header"
-      "image info info info "
-      "text text  text text ";
-  }
-  #profile h2 {
-    grid-area: header;
-  }
-  .info {
-    grid-area: info;
-  }
-  #profile p {
-    grid-area: text;
-  }
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .row1 {
-    flex: 30%;
-  }
-  .row2 {
-    flex: 70%;
-  }
-  .rowbetween {
-    margin-top: 1rem !important;
-  }
-
-  #profile img {
-    grid-area: image;
-    place-self: start;
-  }
-}
-
-@media (min-width: 1000px) {
-  #skills {
-    display: grid;
-    gap: 0.5em 0.5em;
-
-    grid-template:
-      "header header header  "
-      "skills skills languages  ";
-  }
-
-  #skills h2 {
-    grid-area: header;
-  }
-
-  #skills .skills {
-    grid-area: skills;
-  }
-
-  #skills .languages {
-    grid-area: languages;
-    align-self: start;
-  }
-
-  #skills .hobbies {
-    max-width: 20vw;
-    place-self: start;
-    justify-self: center;
-    grid-area: hobbies;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  #skills .hobbies ul {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
-    padding: 0;
-  }
-
-  #skills .hobbies img {
-    visibility: none;
-  }
-
-  #skills .hobbies li {
-    max-width: 100%;
-    flex-basis: 50%;
-    flex-shrink: 0;
-    flex-direction: row;
-  }
-
-  .list {
-    min-width: 0;
-  }
+#profile p {
+  text-align: left;
+  padding-left: 1em;
 }
 
 footer li {
@@ -680,18 +452,6 @@ content {
   margin: 0 25%;
 }
 
-@media (min-width: 1000px) {
-  .Zeit {
-    display: grid;
-    gap: 0.5em 0.5em;
-
-    grid-template:
-      "zeit zeit2"
-      "Beruf  Schule "
-      "Beruf .";
-  }
-}
-
 .Beruf {
   grid-area: Beruf;
 }
@@ -705,4 +465,54 @@ content {
 }
 .zeit2 {
   grid-area: zeit2;
+}
+
+/*  */
+.flip-box {
+  width: 30%;
+  height: 40%;
+}
+
+/* Flip container  */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* horizontal flip */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.flip-box-front {
+  border-radius: 4px;
+  width: 100%;
+  box-shadow: 0 30px 35px -10px #041757;
+  background-image: url("assets/jonas.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 64% 6%;
+}
+/* Style the back side */
+.flip-box-back {
+  transform: rotateY(180deg);
+  color: #041757;
+  padding: 10px 30px;
+  border-radius: 4px;
+  background: #f5f5f5;
+  box-shadow: 1px 1px 6px 0px #f9a401;
 }

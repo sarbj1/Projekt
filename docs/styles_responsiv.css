@@ -1,0 +1,257 @@
+@media (min-width: 1000px) {
+  #profile {
+    display: grid;
+    gap: 0.5em 0.5em;
+
+    grid-template:
+      "header header header header"
+      "info info info info "
+      "text text  text text ";
+  }
+  #profile h2 {
+    grid-area: header;
+    text-align: left;
+    padding-left: 0.6em;
+  }
+  .info {
+    grid-area: info;
+  }
+  #profile p {
+    grid-area: text;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row1 {
+    flex: 30%;
+  }
+  .row2 {
+    flex: 70%;
+  }
+  .rowbetween {
+    margin-top: 1rem !important;
+  }
+
+  #profile img {
+    grid-area: image;
+    place-self: start;
+  }
+  #skills {
+    display: grid;
+    gap: 0.5em 0.5em;
+
+    grid-template:
+      "header  header  "
+      "skills  languages  ";
+  }
+
+  #skills h2 {
+    grid-area: header;
+  }
+
+  #skills .skills {
+    grid-area: skills;
+  }
+
+  #skills .languages {
+    grid-area: languages;
+    align-self: start;
+  }
+
+  #skills .hobbies {
+    max-width: 20vw;
+    place-self: start;
+    justify-self: center;
+    grid-area: hobbies;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #skills .hobbies ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    padding: 0;
+  }
+
+  #skills .hobbies img {
+    visibility: none;
+  }
+
+  #skills li {
+    max-width: 100%;
+    flex-basis: 50%;
+    flex-shrink: 0;
+    flex-direction: row;
+  }
+  .sispname {
+    margin: 0.5em;
+    min-width: 4em;
+  }
+  .list {
+    min-width: 0;
+  }
+  .Zeit {
+    display: grid;
+    gap: 0.5em 0.5em;
+
+    grid-template:
+      "zeit zeit2"
+      "Beruf  Schule "
+      "Beruf .";
+  }
+  .flip-box {
+    width: 45%;
+    height: 50%;
+  }
+  #heattext {
+    visibility: none;
+  }
+  nav {
+    padding: 0.5em;
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    background-image: linear-gradient(
+      180deg,
+      #101a3459 40%,
+      rgba(238, 238, 238, 0) 100%
+    );
+  }
+  .hamb {
+    display: none;
+  }
+  .side-menu {
+    display: none;
+  }
+
+  nav a {
+    color: #f9a201;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .sticky {
+    background-color: #f9a201;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    transition: background-color 0.4s;
+    box-shadow: 0 20px 25px -10px #6a2a10;
+    height: 5vh;
+    background-image: none;
+  }
+
+  nav a:hover {
+    color: white;
+  }
+
+  .sticky a {
+    color: white;
+    transition: background-color 0.3s;
+  }
+
+  .sticky a:hover {
+    color: #32408f;
+  }
+  nav a {
+    padding: 20px;
+
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  a {
+    text-decoration: none;
+  }
+  nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #121733;
+    overflow: hidden;
+    z-index: 1;
+    padding: 0;
+  }
+  .menu {
+    padding-top: 3em;
+  }
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: #f9a201;
+    padding: 2em;
+    text-align: center;
+  }
+  .menu a:hover {
+    color: #ffffff;
+    background-color: #f9a201;
+  }
+  nav {
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    padding: 0;
+  }
+
+  .hamb {
+    cursor: pointer;
+    right: 0px;
+    padding: 20px 10px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    margin-bottom: 2em;
+    background-color: #f9a201;
+  } /* Style label tag */
+  .hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+  } /* Style span tag */
+
+  .hamb-line::before,
+  .hamb-line::after {
+    background: var(--white);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+  .hamb-line::before {
+    top: 5px;
+  }
+  .hamb-line::after {
+    top: -5px;
+  }
+
+  .side-menu {
+    display: none;
+  } /* Hide checkbox */
+
+  .side-menu:checked ~ nav {
+    max-height: 100%;
+  }
+
+  .side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+  }
+  .side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+}

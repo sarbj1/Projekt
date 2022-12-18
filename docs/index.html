@@ -2,52 +2,46 @@
 <head>
   <title>Index</title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="styles_responsiv.css" />
   <script src="https://unpkg.com/sv443-joke-api@0.0.8/web/index.js"></script>
 </head>
 <body>
   <header id="Home">
-    <div class="bild">
-      <img class="profilbild" src="assets/jonas.jpg" />
-    </div>
     <div class="headtext">
       <h1>Portfolio</h1>
+      <h2>Jonas Sarbach</h2>
     </div>
-    <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-    <nav id="nav" class="relative">
-      
-        <div class="menu">
-          <a onclick="hide()" class="hover" href="#Home">Home</a>
-        <a onclick="hide()"class="hover" href="#Profil">Über mich</a>
-        <a onclick="hide()"class="hover" href="#CV">CV</a>
-        <a onclick="hide()"class="hover" href="#Kontakt">Kontakt</a>
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <div class="bild">
+         
+            <img class="rotate" src="assets/rotate.png" />
+          </div>
         </div>
-     
-    </nav>
-  </header>
-
-  <div id="main">
-    <content>
-      <article class="article-item">
-        <div class="article-img"></div>
-
-        <div class="article-content">
+        <div class="flip-box-back">
           <section id="profile">
-            <h2 id="Profil">Über mich</h2>
+            <h2 id="Profil">Profil</h2>
             <p>
               Ich bin begeistert von der IT und die Freude am Arbeitsplatz schätze
-              ich sehr. Ehrlichkeit brauche ich als Grundvoraussetzung für
-              ein gutes Klima im Team. <br />
+              ich sehr. <br />
             </p>
-            <img id="profilbild" src="assets/jonas.jpg" alt="profilbild" />
+            
             <div class="info">
               <div class="card-body">
-                <h3>Jonas Sarbach</h3>
                 <div class="row">
                   <div class="row1">
-                    <strong>Alter:</strong>
+                    <strong>Name:</strong>
+                  </div>
+                  <div class="row2">Jonas Sarbach</div>
+                </div>
+                <div class="row rowbetween">
+                  <div class="row1">
+                    <strong>Alter</strong>
                   </div>
                   <div class="row2">26</div>
+                </div>
+                  
                 </div>
                 <div class="row rowbetween">
                   <div class="row1">
@@ -71,7 +65,30 @@
             </div>
           </section>
         </div>
-      </article>
+      
+    
+  </div>
+   
+  </div>
+    
+    <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+    <nav id="nav" class="relative">
+      
+        <div class="menu">
+          <a onclick="hide()" class="hover" href="#Home">Home</a>
+          <a onclick="hide()"class="hover" href="#skills">Skills</a>
+          <a onclick="hide()"class="hover" href="#hobbies">Hobbies</a>
+          <a onclick="hide()"class="hover" href="#CV">CV</a>
+        <a onclick="hide()"class="hover" href="#Kontakt">Kontakt</a>
+        </div>
+     
+    </nav>
+  </header>
+
+  <div id="main">
+    <content>
+      
 
       <article class="article-item">
         <div class="article-img"></div>
@@ -84,7 +101,7 @@
               <ul class="icon-container">
                 <li>
                   <img src="assets/angular.svg" alt="angular" />
-                  <span> Angular </span>
+                  <p class="sispname"> Angular </p>
                   <div class="flex-spacer"></div>
                   <div class="progress-bar">
                     <div class="progress-bar-fill" style="width: 90%"></div>
@@ -93,7 +110,7 @@
                 
                 <li>
                   <img src="assets/javascript.svg" alt="javascript" />
-                  <span> Javascript </span>
+                  <p class="sispname">Javascript </p>
 
                   <div class="flex-spacer"></div>
                   <div class="progress-bar">
@@ -102,7 +119,7 @@
                 </li>
                 <li>
                   <img src="assets/html.svg" alt="html" />
-                  <span> HTML </span>
+                  <p class="sispname"> HTML </p>
 
                   <div class="flex-spacer"></div>
                   <div class="progress-bar">
@@ -111,7 +128,7 @@
                 </li>
                 <li>
                   <img src="assets/css.svg" alt="css" />
-                  <span> CSS </span>
+                  <p class="sispname"> CSS </p>
 
                   <div class="flex-spacer"></div>
                   <div class="progress-bar">
@@ -125,7 +142,7 @@
               <ul class="icon-container languages">
                 <li>
                   <img src="assets/germany.svg" alt="german" />
-                  <span>Deutsch</span>
+                <p class="sispname">Deutsch</p>
                   <div class="flex-spacer"></div>
                   <div class="progress-bar">
                     <div class="progress-bar-fill" style="width: 99%"></div>
@@ -133,7 +150,7 @@
                 </li>
                 <li>
                   <img src="assets/britain.svg" alt="english" />
-                  <span>English</span>
+                  <p class="sispname">English</p>
 
                   <div class="flex-spacer"></div>
                   <div class="progress-bar">
@@ -142,7 +159,7 @@
                 </li>
                 <li>
                   <img src="assets/france.svg" alt="french" />
-                  <span>Französisch</span>
+                  <p class="sispname">Französisch</p>
 
                   <div class="flex-spacer"></div>
                   <div class="progress-bar">
@@ -269,7 +286,7 @@
                 placeholder="Message"
               ></textarea>
             </div>
-            <input type="submit" value="Submit" id="input-submit" />
+            <input type="submit" value="Nachricht versenden" id="input-submit" />
           </form>
         </div>
       </article>
