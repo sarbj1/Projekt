@@ -1,3 +1,7 @@
+/*
+Reference
+Apear on Scroll from https://github.com/kevin-powell/slide-in-with-intersection-observer
+*/
 const articles = document.querySelectorAll(".article-item");
 
 const appearOptions = {

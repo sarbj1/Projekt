@@ -417,6 +417,12 @@ textarea {
   display: flex;
   flex-direction: column;
 }
+.skills li {
+  margin-bottom: 2px;
+}
+.languages li {
+  margin-bottom: 2px;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
